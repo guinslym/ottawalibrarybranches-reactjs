@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './stylesheets/index.css';
 import App from './components/App';
+import About from './components/About';
+import Whoops404 from './components/Whoops404';
 import registerServiceWorker from './registerServiceWorker';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -10,6 +12,11 @@ ReactDOM.render(
   <Router >
   	<Switch>
     	<Route exact={true} path="/" component={App} />
+    	<Route path="/About/" component={About} />
+		<Route path="Branche" component={About}>
+			<Route path=":filter" component={About} />
+		</Route>
+		<Route path="*" component={Whoops404}/>
     </Switch>
   </Router>
 , document.getElementById('root')
