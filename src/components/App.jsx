@@ -255,14 +255,14 @@ export default class App extends Component {
            {this.state.branches.map(
              (data, i) =>
                 <li className="collection-item" href="#" key={i}>
-                        <Link to="/Branche/{data.ShortName}" >
+                        <Link to="/branch/{data.BranchId}" >
                             {data.Name}
 
                         </Link>
                 </li>
               )}
         </ul>
-
+{this.props.children}
       </div>
     );
   }
