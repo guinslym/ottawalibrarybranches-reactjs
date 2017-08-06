@@ -4,7 +4,7 @@ import './stylesheets/index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 ReactDOM.render(
   <Router >
@@ -12,7 +12,7 @@ ReactDOM.render(
     	<Route exact={true} path="/" component={App} />
     </Switch>
   </Router>
-	, document.getElementById('root')
+, document.getElementById('root')
 );
 registerServiceWorker();
 
